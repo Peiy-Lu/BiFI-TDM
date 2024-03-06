@@ -1,2 +1,2 @@
 # BiFI-TDM
-The code is coming soon.
+## Rise by Lifting Others: Interacting Features to Uplift Few-Shot Fine-Grained Classification
