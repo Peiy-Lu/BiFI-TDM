@@ -60,7 +60,7 @@ class BiFI_TDM(nn.Module):
         feature_map_1=F.normalize(feature_map_1, dim=1, p=2)
         feature_map_2 = self.feature_extractor_2(inp[0])
         feature_map_2=F.normalize(feature_map_2, dim=1, p=2)
-        return feature_map_1, feature_map_2  # N,HW,C
+        return feature_map_1, feature_map_2
 
     def get_recon_dist(self, query, support, alpha, beta, Woodbury):
         # query: way*query_shot*resolution, d
