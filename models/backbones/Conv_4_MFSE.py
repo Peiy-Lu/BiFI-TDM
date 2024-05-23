@@ -161,9 +161,3 @@ class BackBone(nn.Module):
     def forward(self,inp):
         return self.mfse(self.layers(inp))
     
-
-if __name__ == '__main__':
-    inp = torch.rand(100, 3, 84, 84)
-    model = BackBone() 
-    output = model(inp)
-    print(output.shape)
