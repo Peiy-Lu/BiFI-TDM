@@ -63,9 +63,6 @@ class BiFI_TDM(nn.Module):
         return feature_map_1, feature_map_2
 
     def get_recon_dist(self, query, support, alpha, beta, Woodbury):
-        # query: way*query_shot*resolution, d
-        # support: way, shot*resolution , d
-        # Woodbury: whether to use the Woodbury Identity as the implementation or not
         way, shot, resolution, d = support.shape
         query_num = query.size(1)
 
