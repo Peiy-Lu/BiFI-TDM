@@ -181,9 +181,3 @@ class BackBone(nn.Module):
         shot = inp[2]
         return self.fme([self.layers(inp[0]),way,shot])
     
-
-if __name__ == '__main__':
-    inp = torch.rand(200, 3, 84, 84)
-    model = BackBone() 
-    output = model([inp,10,5])
-    print(output.shape)
