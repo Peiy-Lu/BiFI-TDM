@@ -336,11 +336,3 @@ def resnet12(drop_rate=0.0, max_pool=True, **kwargs):
     """
     model = ResNet(BasicBlock, [1, 1, 1, 1], drop_rate=drop_rate, max_pool=max_pool, **kwargs)
     return model
-
-
-if __name__ == '__main__':
-    model = resnet12()
-    data = torch.randn(200, 3, 84, 84)
-    x = model([data,10,5])
-    print(x.shape)
-
