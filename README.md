@@ -30,5 +30,5 @@ Model evaluation is based on the code `tm.evaluate(model)`(the last line) in `tr
 # Few-shot Image Classification
 ## Fine-grained Few-shot Image Classification
 ![Fine-grained](./imgs/table2.png)
-## Coarse-Grained Few-shot Image Classification
+## Coarse-grained Few-shot Image Classification
 ![Coarse-grained](./imgs/table7.png)
