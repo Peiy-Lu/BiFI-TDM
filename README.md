@@ -25,6 +25,15 @@ cd /Experiments/cub_crop/BiFI-TDM-FRN/ResNet-12
 sh train.sh
 ```
 Model evaluation is based on the code `tm.evaluate(model)`(the last line) in `train.py`. You can also create a separate file dedicated to model testing.
-# Few-shot Image Classification
-## Fine-grained Few-shot Image Classification
+# Fine-grained Few-shot Image Classification
 ![Fine-grained](./imgs/table2.png)
+
+# ualitative Comparisons via Visualisations
+We first provide visual comparisons of the discriminative regions in the next figure for the Cars and Aircraft datasets with FRN as the metric module. FRN+BiFI-TDM can identify the most delicate areas to distinguish subcategories, compared with FRN+TDM and FRN. Moreover, consistent areas are highlighted. For example, to classify cars, the headlights and the front logos are important, while to classify aircrafts, the tails painted with company logos are commonly identified. This also matches how humans recognise cars and aircraft.
+![cam](./imgs/cam.png)
+
+Additionally, we depict two examples of the reconstructed query images in the CUB dataset through FRN. In the next figure, the upper and bottom panels visualise the features of the support and query images, while the middle panel presents the reconstructed query images. In FRN+BiFI-TDM, four reconstructed images are obtained via the four sets of features. It is clear that the different features can capture more detailed information than the base features; thus, utilising them can provide better classification results. This is consistent with the analysis in Table 3. Not surprisingly, the reconstructed query images of our method also present more details. Moreover, the four reconstructed images show complementary details, suggesting that all sets of features shall be involved to determine the image labels.
+![reconstruction](./imgs/reconstruction.png)
+
+Finally, we visualized the $\w$'s in Eq.6 in the next figure to validate that the four sets of channel weights identify different discriminative channels. The darker the colour is, the higher the weight of the channel. Plain FRN gives all channels the same weight of 1 while TDM highlights discriminative channels. The four rows of our method correspond to $\w^{FF}$, $\w^{FG}$, $\w^{GF}$, and $\w^{GG}$, respectively. Clearly, they weigh different channels, and this pattern is more obvious in the Cars dataset.
+![channel](./imgs/channel.png)
