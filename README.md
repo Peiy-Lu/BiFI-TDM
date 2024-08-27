@@ -28,7 +28,7 @@ Model evaluation is based on the code `tm.evaluate(model)`(the last line) in `tr
 # Fine-grained Few-shot Image Classification
 ![Fine-grained](./imgs/table2.png)
 
-# ualitative Comparisons via Visualisations
+# Qualitative Comparisons via Visualisations
 We first provide visual comparisons of the discriminative regions in the next figure for the Cars and Aircraft datasets with FRN as the metric module. FRN+BiFI-TDM can identify the most delicate areas to distinguish subcategories, compared with FRN+TDM and FRN. Moreover, consistent areas are highlighted. For example, to classify cars, the headlights and the front logos are important, while to classify aircrafts, the tails painted with company logos are commonly identified. This also matches how humans recognise cars and aircraft.
 ![cam](./imgs/cam.png)
 
